@@ -1,0 +1,781 @@
+@media screen and (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-card {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .about-flex-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-carousel-side {
+    order: -1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .carousel-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  .carousel-slide img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card__media {
+    height: 200px;
+  }
+
+  .project-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-values {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .value-card {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .contact__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .contact-item {
+    width: 100%;
+    padding: 20px 15px;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .carousel-prev, 
+  .carousel-next {
+    display: none;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 20px 0;
+  }
+
+  .menu-mobile {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    gap: 6px;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    background-color: #00aaff;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+
+  .nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #010711;
+    border-left: 2px solid rgba(0, 170, 255, 0.2);
+    padding: 120px 25px 30px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+  }
+
+  .nav__link {
+    font-size: 1.3rem;
+    width: 100%;
+    display: block;
+    padding: 12px 0;
+  }
+
+  .brand {
+    font-size: 1.4rem;
+  }
+
+  .brand img {
+    height: 45px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .pill {
+    margin: 0 auto 14px;
+    justify-content: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .stat {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .about-flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-carousel-side {
+    width: 100%;
+    order: -1;
+  }
+
+  .carousel-container {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 5px 0;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-track {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    padding: 5px 0 20px 0;
+    width: max-content;
+    transition: none;
+    cursor: default;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    scroll-snap-align: start;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+  }
+
+  .carousel-slide:hover img {
+    transform: none;
+  }
+
+  .carousel-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #00aaff;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    z-index: 10;
+  }
+
+  .about-text-side {
+    text-align: center;
+    width: 100%;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .about-stat {
+    min-width: unset;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 170, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 170, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-stat__value {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .about-stat__label {
+    font-size: 0.9rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card__media {
+    height: 200px;
+  }
+
+  .value-card {
+    padding: 25px 20px;
+  }
+
+  .value-card__icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .value-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .contact-item {
+    flex-direction: row;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .contact-item i {
+    font-size: 1.8rem;
+    min-width: 40px;
+    text-align: center;
+  }
+
+  .contact-item__text {
+    text-align: left;
+  }
+
+  .contact-item__text strong {
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+
+  .contact-item__text small {
+    font-size: 0.85rem;
+  }
+
+  .contact__actions {
+    margin-top: 20px;
+  }
+
+  .btn--whats {
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .footer-social {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-logo {
+    font-size: 1.8rem;
+  }
+
+  .footer-copyright p {
+    font-size: 0.85rem;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .section-tag {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .section-divider {
+    margin: 40px auto;
+  }
+
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .container {
+    padding: 0 20px;
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  img, picture, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 15px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  .brand img {
+    height: 38px;
+  }
+
+  .hero {
+    padding: 40px 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+
+  .lead {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .pill {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .stats {
+    gap: 8px;
+  }
+
+  .stat {
+    padding: 12px;
+  }
+
+  .stat__value {
+    font-size: 1.3rem;
+  }
+
+  .stat__label {
+    font-size: 0.8rem;
+  }
+
+  .hero-card {
+    padding: 20px 15px;
+  }
+
+  .hero-card__title {
+    font-size: 1.1rem;
+  }
+
+  .badge {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .checklist li {
+    font-size: 0.9rem;
+    padding-left: 20px;
+  }
+
+  .mini__label {
+    font-size: 0.8rem;
+  }
+
+  .mini__value {
+    font-size: 0.9rem;
+  }
+
+  .carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 220px;
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-badge {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+    top: 12px;
+    right: 12px;
+  }
+
+  .about-title {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .about-stat {
+    padding: 12px;
+  }
+
+  .about-stat__value {
+    font-size: 1.6rem;
+  }
+
+  .about-stat__label {
+    font-size: 0.85rem;
+  }
+
+  .project-card__media {
+    height: 160px;
+  }
+
+  .project-card__content {
+    padding: 15px 12px;
+  }
+
+  .project-card__content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+
+  .project-card__content p {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+
+  .project-card__tags span {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  .value-card {
+    padding: 20px 15px;
+  }
+
+  .value-card__icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .value-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .value-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .contact {
+    padding: 25px 15px;
+  }
+
+  .contact-item {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .contact-item i {
+    font-size: 1.5rem;
+    min-width: 35px;
+  }
+
+  .contact-item__text strong {
+    font-size: 0.95rem;
+  }
+
+  .contact-item__text small {
+    font-size: 0.8rem;
+  }
+
+  .btn--whats {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding: 30px 0;
+    margin-top: 30px;
+  }
+
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social-icon i {
+    font-size: 1.1rem;
+  }
+
+  .footer-copyright p {
+    font-size: 0.8rem;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .section-tag {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .section-header {
+    margin-bottom: 25px;
+  }
+
+  .section-divider {
+    margin: 30px auto;
+  }
+
+  .section-divider::after {
+    width: 100px;
+    height: 6px;
+  }
+
+  .btn--expand {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  .container {
+    padding: 0 12px;
+    overflow-x: hidden;
+  }
+
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  img, picture, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+  }
+}
